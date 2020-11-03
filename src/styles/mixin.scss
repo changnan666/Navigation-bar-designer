@@ -1,0 +1,29 @@
+@mixin border($pos, $color: #000) {
+	border-style: solid;
+	border-color: $color;
+	border-width: 1px;
+
+	@if ($pos == top) {
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
+
+	@if ($pos == right) {
+		border-top: none;
+		border-bottom: none;
+		border-left: none;
+	}
+
+	@if ($pos == bottom) {
+		border-top: none;
+		border-right: none;
+		border-left: none;
+	}
+
+	@if ($pos == left) {
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+	}
+}

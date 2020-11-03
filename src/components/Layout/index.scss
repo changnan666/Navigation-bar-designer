@@ -1,0 +1,135 @@
+@import 'src/styles/color.scss';
+@import 'src/styles/mixin.scss';
+
+.container {
+	$headerHeight: 30px;
+
+	:global {
+		.header {
+			user-select: none;
+			height: $headerHeight;
+			line-height: $headerHeight;
+			background-color: $primary-color;
+			box-sizing: border-box;
+			display: flex;
+			color: #fff;
+			font-size: 12px;
+
+			.logo {
+				font-size: 20px;
+				padding: 0px 4px;
+				color: #c5bbe4;
+			}
+
+			.header-item {
+				.title {
+					cursor: pointer;
+					display: inline-block;
+					padding: 0 16px;
+
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.2);
+					}
+				}
+			}
+
+			.header-right-container {
+				flex: 1;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+
+		.preset-header {
+			height: 28px;
+			line-height: 28px;
+			background-color: $primary-color;
+			@include border(top, #353535);
+		}
+
+		.body {
+			display: flex;
+			height: calc(100vh - 82px);
+			overflow: auto;
+			.slider {
+				width: 40px;
+				height: 100%;
+				overflow: auto;
+				@include border(top);
+				background-color: $primary-color;
+				padding: 0 6px;
+				box-sizing: border-box;
+
+				.slider-item {
+					color: #fff;
+					text-align: center;
+					height: 30px;
+					line-height: 28px;
+					cursor: pointer;
+					border: 1px solid transparent;
+					margin-top: 6px;
+
+					&.active {
+						background-color: rgba(0, 0, 0, 0.2);
+						border: 1px solid #676767;
+					}
+				}
+			}
+			.canvas {
+				flex: 1;
+				background-color: $canvas-color;
+				overflow: auto;
+			}
+			.panels {
+				@include border(top);
+				width: 300px;
+				background-color: $primary-color;
+				display: flex;
+
+				&-tools {
+					width: 40px;
+					background-color: $primary-color;
+					.slider {
+						border: none;
+						.slider-item {
+							&:hover {
+								background-color: rgba(0, 0, 0, 0.2);
+								border: 1px solid #676767;
+							}
+
+							&:visited {
+								background-color: rgba(0, 0, 0, 0.2);
+								border: 1px solid #676767;
+							}
+						}
+					}
+				}
+				&-item {
+					flex: 1;
+					@include border(left);
+				}
+			}
+		}
+
+		.footer {
+			height: 24px;
+			line-height: 24px;
+			background-color: $primary-color;
+			@include border(top);
+			display: flex;
+			text-align: center;
+
+			.resource-loading {
+				width: 40px;
+			}
+
+			.version-select {
+				width: 100px;
+
+				i {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}

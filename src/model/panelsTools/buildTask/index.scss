@@ -1,0 +1,15 @@
+.building {
+	animation: build 2s ease-in-out infinite forwards;
+}
+
+@keyframes build {
+	0% {
+		color: #fff;
+	}
+	50% {
+		color: #a8a8ff;
+	}
+	100% {
+		color: #fff;
+	}
+}
