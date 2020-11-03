@@ -4,7 +4,7 @@ import { header } from 'src/model'
 export default () => {
 	return (
 		<header className='header'>
-			<div className='logo'>FPS</div>
+			<div className='logo'>Navbar</div>
 			{header.left.map((item, i) => {
 				return (
 					<div className='header-item' key={i}>

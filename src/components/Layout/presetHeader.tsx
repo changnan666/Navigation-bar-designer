@@ -1,20 +1,18 @@
 /*
  * @Author: LeeChar
  * @Date: 2020-10-01 12:12:27
- * @LastEditTime: 2020-10-07 23:16:13
- * @LastEditors: LeeChar
+ * @LastEditTime: 2020-11-03 13:34:13
+ * @LastEditors: 李昌南
  * @Description: 预设属性
  * @FilePath: \fps\src\components\Layout\presetHeader.tsx
  */
-import React, { useContext, useEffect } from 'react'
-import { CanvasContext } from 'src/context'
+import React from "react";
+import { PresetHeader } from "src/model";
 
 export default () => {
-	const { actionType } = useContext(CanvasContext)
-
-	useEffect(() => {
-		console.log(actionType, 'actionType')
-	}, [actionType])
-
-	return <div className='preset-header'>自由绘制</div>
-}
+  return (
+    <div className="preset-header">
+      <PresetHeader />
+    </div>
+  );
+};
