@@ -1,17 +1,23 @@
-import React, { useContext } from "react";
-import { CanvasController } from "src/components";
-import { CanvasContext } from "src/context";
+import React, { useState } from "react";
+import { CanvasController, Navbar, Settings } from "src/components";
 
 const App = () => {
-  const { actionType } = useContext(CanvasContext);
+  const [elements, setElements] = useState<any[]>([]);
 
-  const startDraw = actionType === "rect";
-
-  console.log(startDraw);
+  const onMouseDown = () => {
+    elements.push(Navbar);
+    setElements([...elements]);
+  };
 
   return (
     <CanvasController>
-      <div className="content">123</div>
+      <div className="content" onMouseDown={onMouseDown}>
+        {elements.map((Item, i) => (
+          <Settings key={i}>
+            <Item />
+          </Settings>
+        ))}
+      </div>
     </CanvasController>
   );
 };
