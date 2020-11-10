@@ -45,6 +45,7 @@
       line-height: 28px;
       background-color: $primary-color;
       @include border(top, #353535);
+      padding: 0 16px;
     }
 
     .body {

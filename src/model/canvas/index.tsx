@@ -7,6 +7,8 @@ const App = () => {
 
   const startDraw = actionType === "rect";
 
+  console.log(startDraw);
+
   return (
     <CanvasController>
       <div className="content">123</div>

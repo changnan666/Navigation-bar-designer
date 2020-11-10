@@ -1,0 +1,7 @@
+@import "./color.scss";
+
+:global {
+  .bg-primary-light {
+    background-color: $primary-color-light !important;
+  }
+}

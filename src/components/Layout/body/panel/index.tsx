@@ -1,8 +1,6 @@
 import React from "react";
-import { panelsTools, Layer } from "src/model";
-import { Popover, Tabs } from "antd";
-
-const { TabPane } = Tabs;
+import { panelsTools } from "src/model";
+import { Popover } from "antd";
 
 export default () => {
   return (
@@ -28,16 +26,7 @@ export default () => {
           ))}
         </div>
       </div>
-      <div className="panels-item">
-        <Tabs type="card" tabPosition="top">
-          <TabPane tab="Tab 1" key="1">
-            <Layer />
-          </TabPane>
-          <TabPane tab="Tab 2" key="2">
-            2
-          </TabPane>
-        </Tabs>
-      </div>
+      <div className="panels-item"></div>
     </>
   );
 };

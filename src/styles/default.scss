@@ -1,21 +1,21 @@
-@import url('//at.alicdn.com/t/font_2100250_b2il507xc8f.css');
-@import './overAntd';
+@import url("//at.alicdn.com/t/font_2100250_b2il507xc8f.css");
+@import "./overAntd";
 
 * {
-	margin: 0;
-	padding: 0;
-	user-select: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 10px;
+  width: 4px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: rosybrown;
+  background-color: rosybrown;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
