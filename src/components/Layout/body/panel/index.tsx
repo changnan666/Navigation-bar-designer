@@ -1,7 +1,7 @@
 import React from "react";
 import { panelsTools } from "src/model";
 import { Popover } from "antd";
-import { Settings } from "src/components";
+// import { Settings } from "src/components";
 
 export default () => {
   return (
@@ -28,7 +28,7 @@ export default () => {
         </div>
       </div>
       <div className="panels-item">
-        <Settings />
+        {/* <Settings /> */}
       </div>
     </>
   );

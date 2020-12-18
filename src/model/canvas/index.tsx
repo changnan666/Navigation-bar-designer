@@ -1,15 +1,18 @@
 import React, { useContext, useState } from "react";
-import { CanvasController, Navbar } from "src/components";
+import { CanvasController, Navbar, Settings } from "src/components";
 import { CanvasContext } from "src/context";
 
 const App = () => {
-  const { actionType } = useContext(CanvasContext);
+  const { actionType, setActive } = useContext(CanvasContext);
   const [elements, setElements] = useState<any[]>([]);
+
+  const [index, setIndex] = useState(-1);
 
   const onMouseDown = () => {
     if (actionType === "rect") {
       elements.push(Navbar);
       setElements([...elements]);
+      setActive("");
     }
   };
 
@@ -17,7 +20,9 @@ const App = () => {
     <CanvasController>
       <div className="content" onMouseDown={onMouseDown}>
         {elements.map((Item, i) => (
-          <Item />
+          <Settings selectble={i === index} onClick={() => setIndex(i)} key={i}>
+            <Item />
+          </Settings>
         ))}
       </div>
     </CanvasController>
