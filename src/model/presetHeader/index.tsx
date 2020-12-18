@@ -5,12 +5,13 @@ import { CanvasContext } from "src/context";
 const App = () => {
   const { freeDrawing, setFreeDrawing } = useContext(CanvasContext);
 
-  const onChange = (e: any) => {
-    setFreeDrawing(e.target.value);
-  };
-
   return (
-    <Checkbox onChange={onChange} value={freeDrawing}>
+    <Checkbox
+      onChange={(e) => {
+        setFreeDrawing(e.target.checked ? true : false);
+      }}
+      checked={freeDrawing}
+    >
       自由绘制
     </Checkbox>
   );

@@ -1,22 +1,12 @@
 import React from "react";
-
-const defaultStyle: React.CSSProperties = {
-  width: "100%",
-  height: 60,
-  backgroundColor: "#000",
-  color: "#fff",
-  cursor: "auto",
-};
-
-const wrapperStyle: React.CSSProperties = {
-  width: 1200,
-  margin: "0 auto",
-};
+import useNavbar from "src/hooks/useNavbar";
 
 const App = () => {
+  const [style] = useNavbar();
+
   return (
-    <div style={defaultStyle}>
-      <div style={wrapperStyle}>123</div>
+    <div style={style.defaultStyle}>
+      <div style={style.wrapperStyle}>123</div>
     </div>
   );
 };

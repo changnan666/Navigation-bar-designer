@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import { CanvasController, Navbar, Settings } from "src/components";
+import React, { useContext, useState } from "react";
+import { CanvasController, Navbar } from "src/components";
+import { CanvasContext } from "src/context";
 
 const App = () => {
+  const { actionType } = useContext(CanvasContext);
   const [elements, setElements] = useState<any[]>([]);
 
   const onMouseDown = () => {
-    elements.push(Navbar);
-    setElements([...elements]);
+    if (actionType === "rect") {
+      elements.push(Navbar);
+      setElements([...elements]);
+    }
   };
 
   return (
     <CanvasController>
       <div className="content" onMouseDown={onMouseDown}>
         {elements.map((Item, i) => (
-          <Settings key={i}>
-            <Item />
-          </Settings>
+          <Item />
         ))}
       </div>
     </CanvasController>

@@ -1,11 +1,8 @@
 import React from "react";
+import styles from "./index.scss";
 
-type Props = {
-  children: any;
-};
-
-const App = ({ children }: Props) => {
-  return <div onMouseDown={(e) => e.stopPropagation()}>{children}</div>;
+const App = () => {
+  return <div className={styles.container}>123</div>;
 };
 
 export default App;
